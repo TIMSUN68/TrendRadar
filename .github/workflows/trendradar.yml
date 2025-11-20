@@ -43,7 +43,7 @@ jobs:
           EMAIL_SMTP_SERVER: ${{ secrets.EMAIL_SMTP_SERVER }}
           EMAIL_SMTP_PORT: ${{ secrets.EMAIL_SMTP_PORT }}
         # 执行 TrendRadar 主程序（不同分支可能入口文件不同，常见 3 种写法，按顺序尝试）
-        run: |
+        run: python main.py
           # 写法1：若仓库根目录有 run.py（多数分支）
           python run.py
           # 写法2：若仓库根目录有 main.py（部分分支）
